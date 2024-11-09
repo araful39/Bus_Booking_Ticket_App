@@ -21,8 +21,16 @@ class _HomeState extends State<Home> {
         'Jaldhaka',
         'Kishorganj',
       ];
-  TextEditingController dateOfJourney = TextEditingController();
 
+  List<String> city =[
+    'Dhaka',
+    'Dimla',
+    'Jaldhaka',
+    'Kishorganj',
+  ];
+  String? selectedValue;
+  TextEditingController dateOfJourney = TextEditingController();
+TextEditingController controller=TextEditingController();
   int activeStep = 0;
   @override
   Widget build(BuildContext context) {
@@ -36,15 +44,17 @@ class _HomeState extends State<Home> {
                 const SizedBox(height: 15),
                 SizedBox(
                     height: 200,
-                    width: Get.width,
+
                     child: Image.asset(
                       "assets/images/bustand.jpg",
                       fit: BoxFit.cover,
+                      width: Get.width,
                     )),
                 const SizedBox(
                   height: 20,
+
                 ),
-                Row(
+               Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
